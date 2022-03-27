@@ -1,4 +1,4 @@
-from Cpf import Cpf
+import requests
 
-cpf = Cpf("69619829050")
-print(cpf)
+r = requests.get("https://dog.ceo/api/breeds/image/random")
+print(r.json()["message"])
